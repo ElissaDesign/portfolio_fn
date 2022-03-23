@@ -4,6 +4,9 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+a{
+    color: #3359DF;
+}
 
 
 /*------------------ button global styling-------------------*/
@@ -96,8 +99,20 @@ ul li a:hover{
     width: 80%;
     margin: 20px auto;
 }
-
-
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signedIn-user{
+    border-radius: 50%;
+}
+.signout{
+    background-color: #3359DF;
+    color: #fff;
+    padding: 4px;
+    border-radius: 10px;
+}
 
 
 
@@ -168,6 +183,12 @@ nav .fa{
     }
     .nav-container ul{
         padding: 30px;
+    }
+    .nav-list{
+        display: block;
+    }
+    .signedIn-user{
+        display: none;
     }
 
 }
