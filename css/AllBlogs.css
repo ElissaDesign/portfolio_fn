@@ -4,6 +4,9 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+a{
+    color: #3359DF;
+}
 
 
 /*------------------ button global styling-------------------*/
@@ -96,8 +99,20 @@ ul li a:hover{
     width: 80%;
     margin: 20px auto;
 }
-
-
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signedIn-user{
+    border-radius: 50%;
+}
+.signout{
+    background-color: #3359DF;
+    color: #fff;
+    padding: 4px;
+    border-radius: 10px;
+}
 
 
 
@@ -169,6 +184,12 @@ nav .fa{
     .nav-container ul{
         padding: 30px;
     }
+    .nav-list{
+        display: block;
+    }
+    .signedIn-user{
+        display: none;
+    }
 
 }
 @media(max-width: 535px){
@@ -194,6 +215,22 @@ nav .fa{
 
 
 /* -------------Section-1-AllBlogs-container------------- */
+.container-header{
+    display: flex;
+    align-items: center;
+}
+.container-header .btn{
+    margin-left: 50px;
+    padding: 8px;
+    background-color: #3359DF;
+    border: none;
+    border-radius: 10px;
+}
+.container-header .btn a{
+    text-decoration: none;
+    color: #fff;
+
+}
 
 .news-container{
     display: flex;
@@ -228,6 +265,9 @@ nav .fa{
 .author-time .icon-edit-delete{
     display: flex;
     align-items:  flex-end;
+}
+.author-time .icon-edit-delete .delete{
+    color: rgb(255, 0, 0);
 }
 .news-container .author-time p{
     padding-left: 20px;

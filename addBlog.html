@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/addBlog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>AddBlog | ElissaDesign</title>
+</head>
+
+<body>
+
+    <header>
+       <nav>
+           <div class="logo-online">
+            <h1 class="logo"><a href="index.html">ElissaDesign</a></h1>
+            <img src="images/online.png" alt="online icon" class="online-icon">
+           </div>
+           <div class="nav-container" id="navContainer">
+               <i class="fa fa-times" onclick="hideMenu()"></i>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="admin.html">DASHBOARD</a></li>
+                        <li><a href="AllBlogs.html">ALL BLOG</a></li>
+                        <li class="signout"><a href="#">SIGN OUT</a></li>
+                    </ul>
+                    <img src="images/about-blog-1.png" width="40px" height="40px" alt="" class="signedIn-user">
+                </div>
+           </div>
+           <i class="fa fa-bars" onclick="showMenu()" ></i>
+       </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="img-wrapper">
+            <img src="images/addblog-img.png" width="70%" alt="">
+        </div>
+        <div class="add-section">
+            <div class="upload-file">
+                <span class="fa fa-plus-circle">
+
+                </span>
+                <p>Upload photo / video</p>
+            </div>
+
+            <input type="text" placeholder="Title...">
+        </div>
+        <div class="story-text">
+            <textarea name="text" placeholder="Tell your story..."></textarea>
+            <button type="button" class="btn">Publish</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!------------------------- footer-------------------------- -->
+
+    <footer>
+        <p> &copy; Elissadesign||all rights reserved</p>
+    </footer>
+
+
+   
+
+    <script>
+        var navContainer = document.getElementById("navContainer");
+
+        function showMenu(){
+            navContainer.style.top = "0";
+        }
+        function hideMenu(){
+            navContainer.style.top = "-80vh";
+        }
+
+
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	    speed: 1000,
+	    speedAsDuration: true
+})
+    </script>
+</body>
+</html>
