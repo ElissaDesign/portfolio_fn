@@ -215,6 +215,22 @@ nav .fa{
 
 
 /* -------------Section-1-AllBlogs-container------------- */
+.container-header{
+    display: flex;
+    align-items: center;
+}
+.container-header .btn{
+    margin-left: 50px;
+    padding: 8px;
+    background-color: #3359DF;
+    border: none;
+    border-radius: 10px;
+}
+.container-header .btn a{
+    text-decoration: none;
+    color: #fff;
+
+}
 
 .news-container{
     display: flex;
@@ -249,6 +265,9 @@ nav .fa{
 .author-time .icon-edit-delete{
     display: flex;
     align-items:  flex-end;
+}
+.author-time .icon-edit-delete .delete{
+    color: rgb(255, 0, 0);
 }
 .news-container .author-time p{
     padding-left: 20px;
