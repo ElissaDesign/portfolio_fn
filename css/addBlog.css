@@ -191,11 +191,16 @@ nav .fa{
 .add-section{
     margin-top: 80px;
 }
+form p{
+    color:rgb(234, 3, 3);
+    padding: 10px;
+    font-size: small;
+}
 .add-section .upload-file{
     display: flex;
     align-items: center;
 }
-.add-section .upload-file p{
+.add-section .upload-file .upload{
     margin-left: 20px;
     color: rgb(85, 85, 85);
     font-size: 14px;

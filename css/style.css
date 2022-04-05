@@ -197,6 +197,9 @@ nav .fa{
 
 }
 @media(max-width: 535px){
+    .header-content{
+        padding: 20px;
+    }
     .header-content h1{
         font-size: 30px;
     }
@@ -596,7 +599,7 @@ form input, select{
     width: 300px;
     padding: 10px;
     outline: none;
-    border: 1px solid #979393a2;
+    border: 2px solid #979393a2;
     border-radius: 10px;
     color: #787474a8;
     font-size: 15px;
@@ -612,6 +615,26 @@ textarea{
     color: #787474a8;
     font-size: 15px;
 }
+form p{
+    padding: 10px;
+    color: #e74c3c;
+    font-size: small;
+}
+/* ----- */
+.form-control input{
+    width: 300px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #979393a2;
+    border-radius: 10px;
+    color: #787474a8;
+    font-size: 15px;
+}
+
+
+/* ------ */
+
+
 .btn-contact{
     margin-top: 40px;
 }

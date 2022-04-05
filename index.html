@@ -3,6 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -229,11 +233,12 @@
     <div class="contact-section" id="contact">
         <h1>Get in touch</h1>
         <div class="contact-form">
-            <form action="">
+            <form action="" id="form" name="form">
                 <div class="form-container">
                     <div class="input-group">
                         <label for="email">Email</label> <br>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="elissadesign@gmail.com">
+                        <p id="error-email"></p>
                     </div>
                     <div class="input-group">
                         <label for="email">PLAN (Option)</label> <br>
@@ -246,9 +251,10 @@
                 </div>
                 <div class="form-textarea">
                     <label for="">Message</label> <br>
-                <textarea name="Message" id="Message" placeholder="Message"></textarea>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <p id="error-message"></p>
                 </div>
-                <button type="button" class="btn-colored btn-contact">Send</button>
+                <button type="submit" class="btn-colored btn-contact">submit</button>
             </form>
         </div>
     </div>
@@ -270,22 +276,6 @@
 
    
 
-    <script>
-        var navContainer = document.getElementById("navContainer");
-
-        function showMenu(){
-            navContainer.style.top = "0";
-        }
-        function hideMenu(){
-            navContainer.style.top = "-80vh";
-        }
-
-
-
-        var scroll = new SmoothScroll('a[href*="#"]', {
-	    speed: 1000,
-	    speedAsDuration: true
-})
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>

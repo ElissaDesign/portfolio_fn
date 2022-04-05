@@ -5,6 +5,13 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #3359dfba;
+}
 body{
     background: linear-gradient(rgba(51, 89, 223, 0.73),#3359dfba), url(../images/background.png);
     background-position: center;
@@ -84,11 +91,33 @@ body{
 
 .form button{
     background-color: #3359dfba;
-    color: #fff;
+    color: rgb(110, 204, 10);
     border: 2px solid #3359dfba;
     display: block;
     font-family: inherit;
     font-size: 16px;
     padding: 10px;
     width: 100%;
+    transition: .6s;
+}
+.form button:hover{
+    background-color: #ffffff;
+    color: #3359dfba;
+    border: 2px solid #3359dfba;
+}
+.footer h2{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.footer .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.footer .social-icons .fa{
+    font-size: large;
+    margin: 30px 20px;
+    cursor: pointer;
 }
