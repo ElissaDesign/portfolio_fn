@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const signup = document.getElementById('btn-submit');
@@ -7,25 +6,17 @@ const signup = document.getElementById('btn-submit');
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
-    checkInputs()
-    signUp()
+    checkInputs();
+    signIn();
     
 });
+
 
 function checkInputs(){
     //get the values from the inputs
 
-    const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-
-    if(username.value === ''){
-        //show error and error class
-        setErrorFor(username, 'Username cannot be empty');
-    } else {
-        //add success class
-        setSuccessFor(username);
-    }
 
     if(email.value === ''){
         //show error and error class
@@ -71,16 +62,10 @@ function setSuccessFor(input){
 
 // Integration of backend and front-end
 
-async function signUp() { 
-    // const formData = new FormData();
-    // formData.append("username", username.value)
-    // formData.append("email", email.value)
-    // formData.append("password", password.value)
-
-    await fetch('https://backend-resume-app.herokuapp.com/api/auth/register/', {
-        method: 'POST',
-        body : JSON.stringify({
-          name: username.value,
+async function signIn() { 
+    await fetch('http://localhost:1000/api/auth/login/', {
+      method: 'POST',
+      body : JSON.stringify({
           email: email.value,
           password: password.value
       }),
@@ -89,15 +74,19 @@ async function signUp() {
     .then(resp => resp.json())
     .then(res => {
         console.log(res)
-        alert(res)
-        location.reload()
+        const isAdmin = res.others.isAdmin;
+        console.log(isAdmin)
+        if((res.message.includes('You have successfully Logged in')) && (isAdmin) ){
+            localStorage.setItem('token', res.token)
+            localStorage.setItem('name', res.others.name)
+
+            alert(res.message)
+            window.location.href = './admin.html'
+        }else
+        {
+            window.location.href = './index.html'
+            alert(res.message)
+            console.log(res.message)
+        }
     })
 }
-// fetch('https://backend-resume-app.herokuapp.com/api/posts')
-//     .then(response => {
-//         // handle the response
-//         console.log(response)
-//     })
-//     .catch(error => {
-//         // handle the error
-//     });

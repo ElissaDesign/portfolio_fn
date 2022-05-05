@@ -215,6 +215,11 @@ nav .fa{
 
 
 /* -------------Section-1-AllBlogs-container------------- */
+.container{
+    width: 80%;
+    margin: 20px auto;
+
+}
 .container-header{
     display: flex;
     align-items: center;
@@ -235,7 +240,8 @@ nav .fa{
 .news-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-top: 50px;
 }
 .news-container .image-news{
@@ -258,17 +264,28 @@ nav .fa{
     display: flex;
     align-items: center;
 }
-.author-time .icon-edit-delete{
-    display: flex;
-    align-items:  flex-end;
+.news-1 .fa{
+    float: right;
+    padding-right: 10px;
+    margin-right: 20px;
 }
-.author-time .icon-edit-delete{
-    display: flex;
-    align-items:  flex-end;
+.news-1 .fa{
+    cursor: pointer;
 }
-.author-time .icon-edit-delete .delete{
-    color: rgb(255, 0, 0);
+.news-1 .delete{
+    margin-right: 30px;
+    margin-top: -28px;
+    color: red;
+    cursor: pointer;
 }
+.news-1 .fa-pencil-square-o{
+    float: right;
+    margin-top: -28px;
+    padding-right: 40px;
+    color: #3359DF;
+
+}
+
 .news-container .author-time p{
     padding-left: 20px;
     color: #3359DF;
@@ -281,6 +298,8 @@ nav .fa{
 /* ==================== */
 .news-1{
     flex-basis: 30%;
+    margin: 10px 15px;
+    margin-bottom: 50px;
 }
 .news-1 h3{
     font-size: 18px;

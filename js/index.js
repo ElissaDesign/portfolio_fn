@@ -42,3 +42,15 @@ form.addEventListener('submit', (e) => {
     
     e.preventDefault()
 });
+
+// Fetching API's from backend 
+
+async function Messages() {
+    let url = 'Messages.json';
+    try {
+        let res = await fetch('http://localhost:1000/api/messages');
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
