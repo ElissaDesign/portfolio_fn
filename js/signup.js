@@ -2,13 +2,15 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const signup = document.getElementById('btn-submit');
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
-    checkInputs();
+    checkInputs()
+    signUp()
+    
 });
-
 
 function checkInputs(){
     //get the values from the inputs
@@ -64,3 +66,38 @@ function setSuccessFor(input){
     formControl.className = 'form-control success';
 
 }
+
+
+
+// Integration of backend and front-end
+
+async function signUp() { 
+    // const formData = new FormData();
+    // formData.append("username", username.value)
+    // formData.append("email", email.value)
+    // formData.append("password", password.value)
+
+    await fetch('https://backend-resume-app.herokuapp.com/api/auth/register/', {
+        method: 'POST',
+        body : JSON.stringify({
+          name: username.value,
+          email: email.value,
+          password: password.value
+      }),
+      headers : {"Content-type": "application/json;charset=UTF-8"}
+    })
+    .then(resp => resp.json())
+    .then(res => {
+        console.log(res)
+        alert(res)
+        location.reload()
+    })
+}
+// fetch('https://backend-resume-app.herokuapp.com/api/posts')
+//     .then(response => {
+//         // handle the response
+//         console.log(response)
+//     })
+//     .catch(error => {
+//         // handle the error
+//     });

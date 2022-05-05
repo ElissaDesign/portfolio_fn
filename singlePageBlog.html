@@ -33,8 +33,9 @@
     <section>
         <div class="container">
             <div class="hitnews-aboutme">
-                <div class="hitnews">
-                    <img src="images/Image-hit-1.png" alt="news-image" class="hit-news-img">
+                <div class="hitnews" id="hitnews">
+                    <!-- <div>
+                        <img src="images/Image-hit-1.png" alt="news-image" class="hit-news-img">
                     <div class="author-time">
                         <h5>Elissa Design</h5>
                         <p>08 May 20202</p>
@@ -67,45 +68,27 @@
                     <div class="comment-form">
                         
                     </div>
+                    </div> -->
                    
                 </div>
-                <div class="aboutme">
-                    <h2>ABOUT ME</h2>
-                    <img src="images/about-blog-1.png" alt="image-about-me" class="about-me-img">
-                    <p class="text-aboutme">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu integer in vulputate laoreet. Imperdiet fusce ac egestas tellus quis. Enim egestas sem ut nec, cras fau sed.</p>
-                    <div class="social-media">
-                        <h1>FOLLOW US</h1>
-                        <div class="social-media-icons">
-                            <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-instagram"></i></a>
-                            <a href="https://twitter.com/login?lang=en" target="_blanck"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-linkedin"></i></a>
-                       </div>
-                    </div>
-                    <hr>
-                    <div class="side-news-container">
-                        <div class="news-1">
-                            <img src="images/news-blog-image-1.png" alt="news-image" class="image-news">
-                            <div class="author-time">
-                                <h5>Elissa Design</h5>
-                                <p>08 May 20202</p>
-                            </div>
-                            <h3>UI/UX review presents</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vitae nisl, proin tempus ac ac odio nisl leo. Dictumst sed a ut eget tincidunt. Quis elit ac tempus .</p>
-                        </div>
-
-                        <div class="news-1">
-                            <img src="images/Image-hit-3.png" alt="news-image" class="image-news">
-                            <div class="author-time">
-                                <h5>Elissa Design</h5>
-                                <p>08 May 20202</p>
-                            </div>
-                            <h3>UI/UX review presents</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vitae nisl, proin tempus ac ac odio nisl leo. Dictumst sed a ut eget tincidunt. Quis elit ac tempus .</p>
-                        </div>
-                    </div>
+                <div class="commentForm">
+                    <form action="">
+                        <label for="name">Your name</label> <br>
+                        <input type="text" id="yourname" required> <br>
+                        <label for="comment">Your comment</label> <br>
+                        <textarea name="" id="comment" required></textarea> <br>
+                        <button type="submit" value="submit" id="submitForm">Post</button>
+                    </form>
                 </div>
             </div>
+            <div class="social-media">
+                <h1>FOLLOW US</h1>
+                <div class="social-media-icons">
+                    <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/login?lang=en" target="_blanck"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-linkedin"></i></a>
+               </div>
         </div>
     </section>
 
@@ -151,5 +134,6 @@
 	    speedAsDuration: true
 })
     </script>
+    <script src="js/singlePost.js"></script>
 </body>
 </html>
