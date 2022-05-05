@@ -63,7 +63,7 @@ function setSuccessFor(input){
 // Integration of backend and front-end
 
 async function signIn() { 
-    await fetch('http://localhost:1000/api/auth/login/', {
+    await fetch('https://backend-resume-app.herokuapp.com/api/auth/login/', {
       method: 'POST',
       body : JSON.stringify({
           email: email.value,

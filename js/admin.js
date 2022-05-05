@@ -33,7 +33,7 @@ function fetchData() {
         document.getElementById('users').innerHTML=values
     });
 
-    fetch('https://backend-resume-app.herokuapp.com/posts/')
+    fetch('https://backend-resume-app.herokuapp.com/api/posts/')
     .then( (resp) => resp.json())
     .then(data =>{
         const values = data.post.length

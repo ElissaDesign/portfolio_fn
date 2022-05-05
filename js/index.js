@@ -21,10 +21,12 @@ var navContainer = document.getElementById("navContainer");
 //Message Validation form
 
 const email = document.getElementById('email');
+const option = document.getElementById('prices');
 const message = document.getElementById('message');
 const form = document.getElementById('form');
 const errorEmail = document.getElementById('error-email');
 const errorMessage = document.getElementById('error-message');
+const username = 'Unknown';
 
 form.addEventListener('submit', (e) => {
 
@@ -41,16 +43,29 @@ form.addEventListener('submit', (e) => {
     }
     
     e.preventDefault()
+    Messages()
 });
 
 // Fetching API's from backend 
 
 async function Messages() {
-    let url = 'Messages.json';
-    try {
-        let res = await fetch('http://localhost:1000/api/messages');
-        return await res.json();
-    } catch (error) {
-        console.log(error);
-    }
+    await fetch('https://backend-resume-app.herokuapp.com/api/messages/message',{
+        method: 'POST',
+        body: JSON.stringify({
+            name: username,
+            email: email.value,
+            option: option.value,
+            message: message.value
+        }),
+        "Authorization" : `bearer: ${localStorage.getItem('token')}`,
+        headers: {"Content-type": "application/json;charset=UTF-8"}
+
+    })
+    .then(Response => Response.json())
+    .then(res =>{
+        console.log(res)
+        alert(res)
+        location.reload()
+    })
+   
 }
