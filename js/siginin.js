@@ -79,11 +79,15 @@ async function signIn() {
         if((res.message.includes('You have successfully Logged in')) && (isAdmin) ){
             localStorage.setItem('token', res.token)
             localStorage.setItem('name', res.others.name)
+            console.log(res.others.name)
 
             alert(res.message)
             window.location.href = './admin.html'
         }else
         {
+            localStorage.setItem('token', res.token)
+            localStorage.setItem('name', res.others.name)
+            console.log(res.others.name)
             window.location.href = './index.html'
             alert(res.message)
             console.log(res.message)

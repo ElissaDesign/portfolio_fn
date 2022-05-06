@@ -1,16 +1,18 @@
 const comment = document.getElementById('comment');
 const yourname = document.getElementById('yourname');
+const form = document.getElementById('form');
 const submitForm = document.getElementById('submitForm');
+const id = localStorage.getItem('post-id');
+const Name = localStorage.getItem('name');
 
 
 
 function fetchData() {
-    const id = localStorage.getItem('post-id')
     fetch(`https://backend-resume-app.herokuapp.com/api/posts/post/${id}`)
     .then( (resp) => resp.json())
     .then(data =>{
-        console.log(data.post)
-        console.log(data.post.comment)
+        // console.log(data.post)
+        // console.log(data.post.comment)
         const post = data.post
 
            let DataPost =`<div>
@@ -33,7 +35,7 @@ function fetchData() {
         document.getElementById("hitnews").innerHTML = DataPost;
 
         const name = localStorage.getItem('others')
-        console.log(name)
+        // console.log(name)
         const comments =data.post.comment
         // console.log(comments)
         function generateComments(arg){
@@ -41,7 +43,7 @@ function fetchData() {
             for( let i = 0; i < arg.length; i++){
                 comment +=`<div class="CommentItems"><img src="images/about-blog-1.png" alt="" class="comment-profile">
                 <div class="comment-text">
-                    <h4>Elissa Design</h4>
+                    <h4>Unknown</h4>
                     <p>${arg[i]}</p>
                 </div></div>`;
                 // console.log(comment)
@@ -56,33 +58,33 @@ function fetchData() {
         </div>
         `
     })
-}
+};
 
-
-
-async function createComment() {
-    await fetch(`https://backend-resume-app.herokuapp.com/api/posts/post/comment/${id}`, {
+function createComment() {
+    let token = localStorage.getItem('token') 
+    console.log(token)
+    fetch(`http://localhost:1000/api/posts/post/comment/${id}`, {
       method: 'PATCH',
       body : JSON.stringify({
-          comment: comment.value
+             comment: comment.value
       }),
-      "Authorization" : `bearer: ${localStorage.getItem('token')}`,
-      headers : {"Content-type": "application/json;charset=UTF-8"}
+      headers : {
+          "Content-Type": "application/json;charset=UTF-8", 
+          "Authorization": `bearer ${token}`
+        },
+      
     })
-    console.log(comment.value)
-
-    .then(res => res.json())
+    .then(resp => resp.json(),
+    )
     .then(res => {
-        console.log(res)
-        alert(res)
-        location.reload()
+        let message = res.message
+        alert(message)
     })
 }
 
-fetchData()
+fetchData();
 
-
-submitForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (e) => {
+    e.preventDefault(),
     createComment();
 })
