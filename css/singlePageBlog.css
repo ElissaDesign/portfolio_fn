@@ -239,10 +239,10 @@ nav .fa{
 .CommentItems{
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    background-color: #f0eeee;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f8f6f6;
+    padding: 8px;
+    border-radius: 10px;
 }
 .comments-section .comment-profile{
     width: 50px;
@@ -255,7 +255,7 @@ nav .fa{
 }
 .commentForm form input, textarea{
     width: 300px;
-    padding: 6px;
+    padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 4px;

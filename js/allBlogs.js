@@ -36,8 +36,12 @@ fetchData()
 
 
 async function Post(id) {
+  let token = localStorage.getItem('token')
     await fetch (`https://backend-resume-app.herokuapp.com/api/posts/post/${id}`, {
       method: 'DELETE',
+      headers : { 
+        "Authorization": `bearer ${token}`
+      },
     })
     .then(res => res.json())
     .then(response => {
