@@ -26,7 +26,7 @@ const message = document.getElementById('message');
 const form = document.getElementById('form');
 const errorEmail = document.getElementById('error-email');
 const errorMessage = document.getElementById('error-message');
-const username = 'Unknown';
+const username = localStorage.getItem('name');
 
 form.addEventListener('submit', (e) => {
 
@@ -49,6 +49,7 @@ form.addEventListener('submit', (e) => {
 // Fetching API's from backend 
 
 async function Messages() {
+    let token = localStorage.getItem('token')
     await fetch('https://backend-resume-app.herokuapp.com/api/messages/message',{
         method: 'POST',
         body: JSON.stringify({
@@ -57,8 +58,10 @@ async function Messages() {
             option: option.value,
             message: message.value
         }),
-        "Authorization" : `bearer: ${localStorage.getItem('token')}`,
-        headers: {"Content-type": "application/json;charset=UTF-8"}
+        headers: {
+            "Content-type": "application/json;charset=UTF-8",
+            "Authorization": `bearer ${token}`
+        },
 
     })
     .then(Response => Response.json())
