@@ -43,9 +43,9 @@ async function Post(id) {
         "Authorization": `bearer ${token}`
       },
     })
-    .then(res => res.json())
-    .then(response => {
-    //   alert(response.message)
+    .then(resp => resp.json())
+    .then(res => {
+      alert(res.message)
       location.reload()
     })
   }

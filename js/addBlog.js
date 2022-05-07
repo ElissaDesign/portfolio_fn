@@ -47,6 +47,7 @@ updateBtn.addEventListener('click', (e) => {
 //Integration of data
 
 async function createPost() {
+    let token = localStorage.getItem('token')
     const image = document.getElementById('uploadImage').files[0]; 
     const formData = new FormData();
     formData.append("image", image)
@@ -56,11 +57,15 @@ async function createPost() {
     await fetch('https://backend-resume-app.herokuapp.com/api/posts/post/', {
       method: 'POST',
       body : formData,
+      headers : { 
+        "Authorization": `bearer ${token}`
+      },
     })
-    .then(res => res.json())
-    .then(response => {
-        console.log(response)
+    .then(resp => resp.json())
+    .then(res => {
+        alert(res)
         location.reload()
+
     })
 }
 
