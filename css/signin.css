@@ -31,11 +31,34 @@ body{
     overflow: hidden;
 }
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #5f7bdfba;
     padding: 20px 40px;
 }
 .header h2{
     margin: 0;
+}
+.header h3{
+    cursor: pointer;
+    background-color: white;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 0;
+    color: #0037fcba;
+    transition: .6s;
+}
+.header h3 a{
+    text-decoration: none;
+    color: #0037fcba;
+}
+.header h3:hover{
+    background-color: #0037fcba;
+    color: #ffff;
+}
+.header h3 a:hover{
+    color: #ffff;
 }
 .form{
     padding: 30px 40px;
