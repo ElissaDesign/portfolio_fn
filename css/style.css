@@ -547,31 +547,6 @@ section{
 }
 
 @media(max-width: 840px){
-    .pricing-container .card{
-        width: 45%;
-    }
-}
-@media(max-width: 750px){
-    .pricing-container .card{
-        width: 50%;
-    }
-    .pricing-container .card .btn-price{
-        width: 140px;
-        padding: 8px;
-        font-size: 14;
-    }
-}
-@media(max-width: 700px){
-    .pricing-container .card{
-        width: 60%;
-    }
-    .pricing-container .card .btn-price{
-        width: 120px;
-        padding: 8px;
-        font-size: 14;
-    }
-}
-@media(max-width: 640px){
     .pricing-container{
         display: block;
         width: 100%;
@@ -580,9 +555,37 @@ section{
         width: 100%;
         margin-left: 0px;
         margin-bottom: 20px;
+        border-radius: 0px;
+    }
+    .pricing-container .card .head{
+        border-top-right-radius: 0px;
+        border-top-left-radius:0px ;
+        
+    }
+    .pricing-container .card .head-1{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px ; 
+    }
+    .pricing-container .card .head-2{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px ;
+        
     }
 }
-
+@media(max-width: 750px){
+    .pricing-container .card .btn-price{
+        width: 140px;
+        padding: 8px;
+        font-size: 14;
+    }
+}
+@media(max-width: 700px){
+    .pricing-container .card .btn-price{
+        width: 120px;
+        padding: 8px;
+        font-size: 14;
+    }
+}
 
 /* ---------------------Contact-Section------------------------ */
 

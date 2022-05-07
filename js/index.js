@@ -91,8 +91,7 @@ async function Messages() {
     })
     .then(Response => Response.json())
     .then(res =>{
-        console.log(res)
-        alert(res)
+        alert(res.message)
         location.reload()
     })
    

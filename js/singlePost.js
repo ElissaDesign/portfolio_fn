@@ -78,6 +78,7 @@ function createComment() {
     .then(res => {
         let message = res.message
         alert(message)
+        location.reload()
     })
 }
 
