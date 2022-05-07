@@ -62,7 +62,6 @@ function fetchData() {
 
 function createComment() {
     let token = localStorage.getItem('token') 
-    console.log(token)
     fetch(`http://localhost:1000/api/posts/post/comment/${id}`, {
       method: 'PATCH',
       body : JSON.stringify({
