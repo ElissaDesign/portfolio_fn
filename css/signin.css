@@ -45,6 +45,11 @@ body{
     padding-bottom: 20px;
     position: relative;
 }
+.form-control p{
+    text-align: center;
+    margin-top: 10px;
+    color: #e74c3c;
+}
 .form-control label{
     display: inline-block;
     margin-bottom: 5px;
