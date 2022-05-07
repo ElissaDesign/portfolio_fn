@@ -346,12 +346,25 @@ section{
 
  /* ------------------section-3 Portfolio----------------------- */
 
+ /* Swipper  */
+ .swiper {
+    width: 80%;
+    height: 600px;
+  }
+
+
+ /* ------------------- */
+
+
+
+
+
  .portfolio-container{
      display: flex;
      align-items: center;
  }
  .portfolio-container .portfolio-img{
-     width: 100%;
+     width: 60%;
  }
  .portfolio-container .portfolio-text{
      margin-left: 40px;
@@ -383,7 +396,7 @@ section{
 
  @media(max-width: 1200px){
     .portfolio-container .portfolio-img{
-        width: 80%;
+        width: 60%;
     }
  }
  @media(max-width: 1130px){
@@ -400,6 +413,7 @@ section{
     }
     .portfolio-container .portfolio-text{
         margin-top: 20px;
+        margin-left: 0px ;
         text-align: center;
     }
     .portfolio-text .btn-container{
@@ -460,6 +474,7 @@ section{
 .pricing-section{
     width: 100%;
     background-color: #3359DF;
+    margin-top: 15px;
 }
 .pricing-section h1{
     padding-top: 30px;
