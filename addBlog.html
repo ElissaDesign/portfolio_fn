@@ -1,83 +1,87 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/addBlog.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/addBlog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <title>AddBlog | ElissaDesign</title>
-</head>
+    <title>AddBlog | JanvierDesign</title>
+  </head>
 
-<body>
-
+  <body>
     <header>
-       <nav>
-           <div class="logo-online">
-            <h1 class="logo"><a href="index.html">ElissaDesign</a></h1>
-            <img src="images/online.png" alt="online icon" class="online-icon">
-           </div>
-           <div class="nav-container" id="navContainer">
-               <i class="fa fa-times" onclick="hideMenu()"></i>
-                <div class="nav-list">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="admin.html">DASHBOARD</a></li>
-                        <li><a href="AllBlogs.html">ALL BLOG</a></li>
-                        <li class="signout"><a href="#">SIGN OUT</a></li>
-                    </ul>
-                    <img src="images/about-blog-1.png" width="40px" height="40px" alt="" class="signedIn-user">
-                </div>
-           </div>
-           <i class="fa fa-bars" onclick="showMenu()" ></i>
-       </nav>
+      <nav>
+        <div class="logo-online">
+          <h1 class="logo"><a href="index.html">JanvierDesign</a></h1>
+          <img src="images/online.png" alt="online icon" class="online-icon" />
+        </div>
+        <div class="nav-container" id="navContainer">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <div class="nav-list">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="admin.html">DASHBOARD</a></li>
+              <li><a href="AllBlogs.html">ALL BLOG</a></li>
+              <li class="signout"><a href="#">SIGN OUT</a></li>
+            </ul>
+            <img
+              src="images/about-blog-1.png"
+              width="40px"
+              height="40px"
+              alt=""
+              class="signedIn-user" />
+          </div>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
     </header>
 
-
     <div class="container" id="form">
-        <div class="img-wrapper">
-            <img src="images/addblog-img.png" width="70%" alt="">
+      <div class="img-wrapper">
+        <img src="images/addblog-img.png" width="70%" alt="" />
+      </div>
+      <form action="" id="form" name="form">
+        <div class="add-section">
+          <div class="upload-file">
+            <span class="fa fa-plus-circle"> </span>
+            <input
+              type="file"
+              name="file"
+              placeholder="pload photo / video"
+              class="upload"
+              id="uploadImage" />
+            <!-- <p>Upload photo / video</p> -->
+          </div>
+
+          <input type="text" placeholder="Title..." name="title" id="title" />
+          <p id="error-title"></p>
         </div>
-        <form action="" id="form" name="form">
-            <div class="add-section">
-                <div class="upload-file">
-                    <span class="fa fa-plus-circle">
-    
-                    </span>
-                    <input type="file"  name="file" placeholder="pload photo / video" class="upload" id="uploadImage">
-                    <!-- <p>Upload photo / video</p> --> 
-                </div>
-    
-                <input type="text" placeholder="Title..." name="title" id="title">
-                <p id="error-title"></p>
-            </div>
-             <p id="error-story"></p>
-            <div class="story-text">
-                <textarea name="text" placeholder="Tell your story..." id="story"></textarea>
-                <button type="submit" value="submit" class="btn">Publish</button>
-                <button type="submit" value="submit" class="btn" id="updateBtn">Update</button>
-            </div>
-        </form>
+        <p id="error-story"></p>
+        <div class="story-text">
+          <textarea
+            name="text"
+            placeholder="Tell your story..."
+            id="story"></textarea>
+          <button type="submit" value="submit" class="btn">Publish</button>
+          <button type="submit" value="submit" class="btn" id="updateBtn">
+            Update
+          </button>
+        </div>
+      </form>
     </div>
 
-
-
-
-
-
-
-<!------------------------- footer-------------------------- -->
+    <!------------------------- footer-------------------------- -->
 
     <footer>
-        <p> &copy; Elissadesign||all rights reserved</p>
+      <p>&copy; Janvierdesign||all rights reserved</p>
     </footer>
 
-
-   
-
-    <script src="js/addBlog.js">
-        
-    </script>
-</body>
+    <script src="js/addBlog.js"></script>
+  </body>
 </html>

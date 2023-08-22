@@ -1,121 +1,108 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/AllBlogs.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/AllBlogs.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <title>BlogAdmin | ElissaDesign</title>
-</head>
+    <title>BlogAdmin | JanvierDesign</title>
+  </head>
 
-<body>
-
+  <body>
     <header>
-       <nav>
-           <div class="logo-online">
-            <h1 class="logo"><a href="index.html">ElissaDesign</a></h1>
-            <img src="images/online.png" alt="online icon" class="online-icon">
-           </div>
-           <div class="nav-container" id="navContainer">
-               <i class="fa fa-times" onclick="hideMenu()"></i>
-                <div class="nav-list">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="admin.html">DASHBOARD</a></li>
-                        <li><a href="blogLandingPage.html">BLOG</a></li>
-                        <li><a href="#" class="signout">SIGN OUT</a></li>
-                       
-                    </ul>
-                    <img src="images/about-blog-1.png" width="40px" height="40px" alt="" class="signedIn-user">
-                </div>
-           </div>
-           <i class="fa fa-bars" onclick="showMenu()" ></i>
-       </nav>
+      <nav>
+        <div class="logo-online">
+          <h1 class="logo"><a href="index.html">JanvierDesign</a></h1>
+          <img src="images/online.png" alt="online icon" class="online-icon" />
+        </div>
+        <div class="nav-container" id="navContainer">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <div class="nav-list">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="admin.html">DASHBOARD</a></li>
+              <li><a href="blogLandingPage.html">BLOG</a></li>
+              <li><a href="#" class="signout">SIGN OUT</a></li>
+            </ul>
+            <img
+              src="images/about-blog-1.png"
+              width="40px"
+              height="40px"
+              alt=""
+              class="signedIn-user" />
+          </div>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
     </header>
 
-<section>
-    <div class="container container-header">
+    <section>
+      <div class="container container-header">
         <h1>All Blogs</h1>
-        <button class="btn"><a href="addBlog.html"><span class="fa fa-plus-circle"></span>Add a blog</a></button>
-    </div>
-</section>
-
-
-
-    <section>
-        <div class="container">
-            <div class="news-container" id="news-container">
-                
-        
-            </div>
-
-
-
-
-
-           
-        </div>
+        <button class="btn">
+          <a href="addBlog.html"
+            ><span class="fa fa-plus-circle"></span>Add a blog</a
+          >
+        </button>
+      </div>
     </section>
 
-
     <section>
-        <div class="container">
-            <div class="align-btn">
-                <div class="btn-next">
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p><i class="fa fa-arrow-right"></i></p>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+        <div class="news-container" id="news-container"></div>
+      </div>
     </section>
 
-
     <section>
-        <div class="container">
-            <div class="social-media-section">
-                <a href="#">LinkedIn</a>
-                <a href="#">Email</a>
-                <a href="#">GitHub</a>
-            </div>
+      <div class="container">
+        <div class="align-btn">
+          <div class="btn-next">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p><i class="fa fa-arrow-right"></i></p>
+          </div>
         </div>
+      </div>
     </section>
 
-   
+    <section>
+      <div class="container">
+        <div class="social-media-section">
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-<!------------------------- footer-------------------------- -->
+    <!------------------------- footer-------------------------- -->
 
     <footer>
-        <p> &copy; Elissadesign||all rights reserved</p>
+      <p>&copy; Janvierdesign||all rights reserved</p>
     </footer>
 
-
-   
-
     <script>
-        var navContainer = document.getElementById("navContainer");
+      var navContainer = document.getElementById("navContainer");
 
-        function showMenu(){
-            navContainer.style.top = "0";
-        }
-        function hideMenu(){
-            navContainer.style.top = "-80vh";
-        }
+      function showMenu() {
+        navContainer.style.top = "0";
+      }
+      function hideMenu() {
+        navContainer.style.top = "-80vh";
+      }
 
-
-
-        var scroll = new SmoothScroll('a[href*="#"]', {
-	    speed: 1000,
-	    speedAsDuration: true
-})
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true,
+      });
     </script>
     <script src="js/allBlogs.js"></script>
-</body>
+  </body>
 </html>
